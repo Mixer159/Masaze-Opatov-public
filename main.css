@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --white-color: #f5f5f5;
+    --black-color: #0a0a0a;
+    --text-black: #0a0a0a;
+    --text-white: #f5f5f5;
+    --navbar-color: #d4578f;
+    --background-color: #fee3f2;
+    --pink-color: #D14081;
+    --grey-color: rgb(55 65 81);
+}
+
+body,
+html {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+}
+
+.window-width {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+
+}
+
+.background-image {
+    background-image: url(/images/onas.webp);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 15%) top;
+    background-size: 80%;
+}
+
+.navbar {
+    position: fixed;
+    /* Fixes navbar at the top of the screen */
+    top: 20px;
+    /* Ensures it sticks to the very top */
+    width: 100%;
+    /* Ensures navbar spans the entire width */
+    z-index: 1000;
+    /* Ensures navbar is above other content */
+}
+
+/* Base styles for the navbar */
+.navbar {
+    color: var(--text-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    height: 60px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #340d281e;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    border-radius: 20px;
+}
+
+.nav-link,
+#name {
+    padding: 10px;
+    color: var(--text-black);
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+#name:hover {
+    color: var(--pink-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.line {
+    background-color: white;
+    height: 3px;
+    width: 30px;
+}
+
+#name {
+    padding-left: 0;
+}
+
+.galerie-nav {
+    padding-right: 0;
+}
+
+
+
+
+
+/* HEADER */
+
+.main {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    height: calc(100vh - 60px);
+    max-height: 1000px;
+    /* Adds a grey bottom border */
+    padding-top: 60px;
+
+
+}
+
+.info-main {
+    padding-top: 15rem !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.grey-line {
+    border-bottom: 1px solid grey;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+.main-sirka,
+.cenik-sirka {
+    width: 50%;
+}
+
+.main-sirka>p {
+    color: var(--grey-color);
+    line-height: 2.3rem;
+}
+
+
+
+h2 {
+    font-family: "Alex Brush", cursive;
+    font-size: 3rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+p {
+    line-height: 2.3rem;
+
+}
+
+
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cenik-zobrazeni2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-table {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    /* Horizontal spacing 0, Vertical spacing 10px */
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    background-color: var(--white-color);
+    /* Background color for cells */
+    border: 1px solid transparent;
+    /* Transparent border */
+}
+
+th {
+    background-color: #f2f2f2;
+    /* Light grey background for headers */
+}
+
+tr td:first-child,
+tr th:first-child {
+    border-top-left-radius: 10px;
+    /* Adjust radius as needed */
+    border-bottom-left-radius: 10px;
+}
+
+tr td:last-child,
+tr th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+/* No changes needed for these, keeping your style consistent */
+td>p {
+    line-height: 1.5rem;
+    color: var(--grey-color);
+}
+
+td>p>b {
+    color: var(--text-black);
+}
+
+table tr td:nth-child(2) {
+    width: 20%;
+}
+
+
+#popisek {
+    text-align: center;
+}
+
+#popisek>a {
+    text-decoration: none;
+    color: var(--pink-color);
+}
+
+#disclaimer {
+    text-align: center;
+    font-size: .7rem;
+    line-height: 1rem;
+
+}
+
+/* KONTAKT */
+
+
+.kontakty-celkove {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.border {
+    border-radius: 1rem;
+}
+
+.kontakty-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakty-row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 2rem;
+}
+
+.otev-doba,
+.mapa {
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+.otev-doba>p {
+    margin: 0;
+}
+
+#facebook {
+    height: 2rem;
+    width: 2rem;
+    margin-top: 1.5rem;
+}
+
+#podrobnypopis>p {
+    line-height: 1.5rem;
+}
+
+.kontakt-box {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    flex: 1;
+    padding: 1rem;
+}
+
+.kontakt-box>a {
+    color: var(--text-black);
+    text-decoration: none;
+}
+
+.kontakt-box>p,
+h3 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.map-iframe {
+    border: 2px solid #ccc;
+    /* Example border style */
+    border-radius: 15px;
+    /* Rounded corners */
+}
+
+
+/* ONAS */
+.onas {
+    display: flex;
+    justify-content: center;
+    /* Adds a grey bottom border */
+    height: 100%;
+}
+
+.onas-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.onas-left {
+    height: 100%;
+    width: 50%;
+
+}
+
+.onas-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 2rem;
+}
+
+
+/* CSS */
+.onas-button a {
+    all: unset;
+
+}
+
+
+/* CSS */
+.onas-button {
+    align-items: center;
+    background-color: var(--white-color);
+    border: 1px solid #DFDFDF;
+    border-radius: 16px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 28px;
+    padding: 14px 22px;
+    text-decoration: none;
+    transition: all .4s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    max-width: 400px;
+    font-weight: 500;
+}
+
+.onas-button:active,
+.onas-button:hover {
+    outline: 0;
+}
+
+.onas-button:hover {
+    background-color: var(--pink-color);
+    border-color: rgba(0, 0, 0, 0.19);
+}
+
+/* GALERIE */
+.galerie {
+    padding-bottom: 5rem;
+}
+
+
+
+.galerie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.galerie-grid img {
+    width: 21rem;
+    height: 21rem;
+    object-fit: cover;
+    /* Ensures images cover the grid item, might crop, but maintains aspect ratio */
+    border-radius: 8px;
+    display: block;
+    /* Removes any space below the image */
+}
+
+#galerie-grey-line {
+    border: none;
+}
+
+
+
+
+.galerie-container,
+.kontakt-container,
+.table-container,
+.footer-container {
+    width: unset;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #ed066ece;
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--text-white);
+}
+
+.footer-left>p {
+    margin: 0;
+}
+
+.footer-right {
+    display: flex;
+    width: 40%;
+    margin-top: 1rem;
+}
+
+.footer-right a {
+    flex: 1;
+    text-align: right;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text-white);
+}
+
+.footer-bottom-row {
+    color: var(--text-white);
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.footer-bottom-row a {
+    color: var(--text-white);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+
+    .navbar {
+        top: 0;
+    }
+
+    .nav-container {
+        flex-direction: row;
+        border-radius: 0;
+        background-color: var(--navbar-color);
+        backdrop-filter: none;
+
+    }
+
+    .navbar .right {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+
+
+    .navbar.active .right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 59.59px;
+        width: 100%;
+        left: 0;
+        background-color: var(--navbar-color);
+        animation: slideIn 0.3s ease forwards;
+        -webkit-backdrop-filter: none;
+        /* For Safari compatibility */
+    }
+
+    .navbar.active .nav-link {
+
+        margin: 15px 0;
+    }
+
+    .nav-link,
+    #name {
+        color: var(--text-white);
+
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    p {
+        line-height: 1.8rem;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .table-container {
+        width: unset;
+    }
+
+    .container-table {
+        width: 100%;
+    }
+
+    .cenik-zobrazeni2 {
+        flex-direction: column;
+    }
+
+    .cenik-sirka {
+        width: 100%;
+    }
+
+    table tr td:nth-child(2) {
+        width: 20%;
+        min-width: 70px;
+    }
+
+    .kontakty-row {
+        flex-direction: column;
+    }
+
+    .main-sirka,
+    .main-kontakt {
+        width: 100%;
+        padding-bottom: 8rem;
+    }
+
+    .onas,
+    .main,
+    .kontakt-container {
+        height: unset;
+        max-height: unset;
+    }
+
+    .kontakt-container,
+    .onas-container {
+        width: unset;
+    }
+
+
+    .onas-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .onas-left,
+    .onas-right {
+        width: 100%;
+    }
+
+    .galerie-container {
+        width: unset;
+    }
+
+    .galerie-grid {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .footer-row {
+        flex-direction: column;
+    }
+
+    .footer-right {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .footer-right a {
+        text-align: left;
+        margin-top: .4rem;
+
+    }
+
+
+
+}
